@@ -7,9 +7,22 @@
 </head>
 <body>
         <script>
-            const pergunta1 = prompt("Que horas você vai dormir?")
-            const pergunta2 = prompt("Você tem dificuldade pra dormir?");
-            const pergunta3 = prompt("")
+            const horaDormir = prompt("Que horas você vai dormir?(Em número)");
+            const dificuldadeDormir = prompt("Você tem dificuldade pra dormir?");
+            const caféDormir = prompt("Você toma café antes de dormir?");
+            const alcoolDormir = prompt("Você toma alcool antes de dormir?");
+            const telaDormir = prompt("Você usa alguma tela antes de dormir?");
+            const sexoDormir = prompt("Você costuma ter alguma relação sexual antes de dormir?");
+            const fisicaDormir = prompt("Você costuma fazer alguma atividade fisíca");
+            const doencaDormir = prompt("Você tem insônia ou apneia do sono");
+            const horaAcorda = prompt("Que horas você costuma acordar?");
+
+            if(horaAcorda + horaDormir == horaDormir + 8 || 9){
+                alert("Mantenha essa rotina")
+            } else if(horaAcorda + horaDormir ==! horaDormir + 8 || 9 ){
+                alert("Tente dormir por oito ou nove horas por noite!")
+            }
+
         </script>
 </body>
 </html>
