@@ -35,6 +35,32 @@ html {
     margin: 20px 20px 20px 20px;
     font-size: 2rem;
 }
+
 main section.atas{
 align-items: center;
+}
+.Atas h1{
+   text-align: center;
+    font-weight: 700;
+    font-size: 100px;
+    color:#3b657a;
+    margin: 30px;
+
+    
+
+}
+.Atas p{
+    background-color: #3b657a;
+    padding: 20px;
+    margin: 30px;
+    color: white;
+    border-radius: 30px;
+    
+}
+.olok ul{
+    display: flex;
+}
+.oloki ul {
+    display: flex;
+
 }
