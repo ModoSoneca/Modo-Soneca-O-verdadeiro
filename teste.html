@@ -6,23 +6,29 @@
     <title>Perguntas</title>
 </head>
 <body>
-        <script>
-            const horaDormir = prompt("Que horas você vai dormir?(Em número)");
-            const dificuldadeDormir = prompt("Você tem dificuldade pra dormir?");
-            const caféDormir = prompt("Você toma café antes de dormir?");
-            const alcoolDormir = prompt("Você toma alcool antes de dormir?");
-            const telaDormir = prompt("Você usa alguma tela antes de dormir?");
-            const sexoDormir = prompt("Você costuma ter alguma relação sexual antes de dormir?");
-            const fisicaDormir = prompt("Você costuma fazer alguma atividade fisíca");
-            const doencaDormir = prompt("Você tem insônia ou apneia do sono");
-            const horaAcorda = prompt("Que horas você costuma acordar?");
+<script>
+    const horaDormir = Number(prompt("Que horas você vai dormir? (0–23)"));
+    const dificuldadeDormir = prompt("Você tem dificuldade pra dormir?");
+    const caféDormir = prompt("Você toma café antes de dormir?").toUpperCase().charAt(0).trim();
+    const alcoolDormir = prompt("Você toma alcool antes de dormir?");
+    const telaDormir = prompt("Você usa alguma tela antes de dormir?");
+    const sexoDormir = prompt("Você costuma ter alguma relação sexual antes de dormir?");
+    const fisicaDormir = prompt("Você costuma fazer alguma atividade física?");
+    const doencaDormir = prompt("Você tem insônia ou apneia do sono?");
+    const horaAcorda = Number(prompt("Que horas você costuma acordar? (0–23)"));
 
-            if(horaAcorda + horaDormir == horaDormir + 8 || 9){
-                alert("Mantenha essa rotina")
-            } else if(horaAcorda + horaDormir ==! horaDormir + 8 || 9 ){
-                alert("Tente dormir por oito ou nove horas por noite!")
-            }
+    let horasDormidas;
 
-        </script>
+    if (horaAcorda >= horaDormir) {
+        horasDormidas = horaAcorda - horaDormir;
+    } else {
+        horasDormidas = (24 - horaDormir) + horaAcorda;
+    }
+    if (horasDormidas === 8 || horasDormidas === 9) {
+        alert("Mantenha essa rotina! Você está dormindo " + horasDormidas + " horas.");
+    } else {
+        alert("Você dorme " + horasDormidas + " horas. Tente dormir 8 ou 9 horas por noite!");
+    }
+</script>
 </body>
 </html>

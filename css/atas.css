@@ -42,18 +42,14 @@ align-items: center;
 .Atas h1{
    text-align: center;
     font-weight: 700;
-    font-size: 100px;
+    font-size: 15vw;
     color:#3b657a;
     margin: 30px;
-
-    
-
 }
 .Atas p{
     background-color: #3b657a;
-    padding: 20px;
+    padding: 2vw;
     margin: 30px;
     color: white;
-    border-radius: 30px;
-    
+    border-radius: 30px; 
 }
