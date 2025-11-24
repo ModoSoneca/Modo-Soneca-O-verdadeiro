@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<body>
+<script>
+    function perguntaSimNao(texto) {
+        const resposta = prompt(texto + " (sim/não)").trim().toLowerCase();
+        return (resposta.startsWith("s")); // true se sim
+    }
+
+    const horaDormir = Number(prompt("Que horas você vai dormir? (0–23)"));
+    const horaAcorda = Number(prompt("Que horas você costuma acordar? (0–23)"));
+
+    const dificuldadeDormir = perguntaSimNao("Você tem dificuldade pra dormir?");
+    const cafeDormir = perguntaSimNao("Você toma café antes de dormir?");
+    const alcoolDormir = perguntaSimNao("Você toma álcool antes de dormir?");
+    const telaDormir = perguntaSimNao("Você usa telas antes de dormir?");
+    const sexoDormir = perguntaSimNao("Você costuma ter relação sexual antes de dormir?");
+    const fisicaDormir = perguntaSimNao("Você costuma fazer atividade física?");
+    const doencaDormir = perguntaSimNao("Você tem insônia ou apneia do sono?");
+
+    // Cálculo das horas dormidas
+    let horasDormidas;
+    if (horaAcorda >= horaDormir) {
+        horasDormidas = horaAcorda - horaDormir;
+    } else {
+        horasDormidas = (24 - horaDormir) + horaAcorda;
+    }
+
+    // Sistema de pontuação
+    let pontos = 0;
+    let recomendacoes = [];
+
+    // Horas de sono
+    if (horasDormidas === 8 || horasDormidas === 9) {
+        pontos += 2;
+    } else {
+        recomendacoes.push("Tente dormir por 8 ou 9 horas.");
+    }
+
+    // Café antes de dormir
+    if (cafeDormir) {
+        pontos -= 1;
+        recomendacoes.push("Evite café até 6 horas antes de dormir.");
+    }
+
+    // Álcool
+    if (alcoolDormir) {
+        pontos -= 1;
+        recomendacoes.push("Evite álcool antes de dormir.");
+    }
+
+    // Tela antes de dormir
+    if (telaDormir) {
+        pontos -= 1;
+        recomendacoes.push("Evite telas por pelo menos 1 hora antes de dormir.");
+    }
+
+    // Sexo antes de dormir
+    if (sexoDormir) {
+        pontos += 1; // ajuda a relaxar, benefício real
+    }
+
+    // Atividade física
+    if (fisicaDormir) {
+        pontos += 1;
+    } else {
+        recomendacoes.push("Tente fazer alguma atividade física durante o dia.");
+    }
+
+    // Problemas de sono
+    if (doencaDormir) {
+        pontos -= 2;
+        recomendacoes.push("Procure um especialista para avaliar insônia ou apneia.");
+    }
+
+    // Dificuldade para dormir
+    if (dificuldadeDormir) {
+        pontos -= 1;
+        recomendacoes.push("Tente criar uma rotina relaxante antes de dormir.");
+    }
+
+    // Classificação final
+    let classificacao = "";
+    if (pontos >= 3) {
+        classificacao = "Sua rotina de sono é BOA!";
+    } else if (pontos >= 0) {
+        classificacao = "Sua rotina de sono é REGULAR.";
+    } else {
+        classificacao = "Sua rotina de sono é RUIM e precisa de atenção!";
+    }
+
+    // Mensagem final
+    let mensagem = 
+        "📊 Avaliação do Sono\n\n" +
+        "⏰ Você dorme aproximadamente: " + horasDormidas + " horas\n" +
+        "⭐ Pontuação geral: " + pontos + "\n" +
+        "📌 Resultado: " + classificacao + "\n\n";
+
+    if (recomendacoes.length > 0) {
+        mensagem += "🔧 Recomendações:\n- " + recomendacoes.join("\n- ");
+    } else {
+        mensagem += "Tudo indica que sua rotina de sono está saudável! Continue assim!";
+    }
+
+    alert(mensagem);
+</script>
+</body>
+</html>
