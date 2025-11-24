@@ -42,14 +42,21 @@ align-items: center;
 .Atas h1{
    text-align: center;
     font-weight: 700;
-    font-size: 15vw;
+    font-size: 100px;
     color:#3b657a;
-    margin: 30px;
+  
 }
 .Atas p{
     background-color: #3b657a;
     padding: 2vw;
-    margin: 30px;
+    margin: 30px 300px 30px 300px;
     color: white;
-    border-radius: 30px; 
+    border-radius: 100px; 
+}
+.Atas{
+   background-image: url(imgs/6.jpg);
+
+    color: #3b657a;
+
+    
 }

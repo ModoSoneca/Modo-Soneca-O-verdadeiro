@@ -20,7 +20,7 @@ header {
 
 }
 
-ol {
+ ol {
     display: flex;
     gap: 20px;
     margin: 23px 20px 23px 20px;
@@ -147,19 +147,75 @@ p{
     padding: 10px 10px 10px 10px;
     margin: 70px 30px 30px 30px;
 }
-.recomendado{
-    background-image: url(imgs/6.jpg);
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    background-position: center;
-    display: flex;
-    color: #3b657a;
+.text-box {
+margin: 50px 1000px 30px 800px;
+  display: flex;     /* coloca os botões lado a lado */
+    gap: 20px; 
+    align-items: center;  /* alinha na vertical */
+}
 
-    
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
 }
-.recomendado h1{
-    padding: 20px 400px 400px 400px;
-    text-align: center;
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.btn-white {
+    background-color: #3b657a;
+    color: aliceblue;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+.btn-white::after {
+    background-color:#003f69;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+                                                   /*recomendado*/
 
