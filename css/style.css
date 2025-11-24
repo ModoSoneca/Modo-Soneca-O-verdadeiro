@@ -107,3 +107,11 @@ main.pintos {
     padding: 50px 0;               
 }
 
+.eavitar{
+    background-image: url(imgs/6.jpg);
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;  
+    min-height: 100vh;             
+    padding: 50px 0; 
+}
