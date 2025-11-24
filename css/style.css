@@ -64,24 +64,10 @@ main.pintos {
             left: 50%;               
             transform: translateX(-50%);
 }
-.titulo-container {
-            position: absolute;
-            top: 100px;              
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;    
-            border-radius: 12px;
-            
-        }
-        .titulo-container h2{
-            font-size: 30px;
-        }
+
     main h1{
         font-size: 6rem;
         font-weight: 700;
-    }
-    .peq{
-        font-size: 2rem;
     }
     .button{
       font-weight: 700;
@@ -93,60 +79,10 @@ main.pintos {
         
 
     }
-
-
-    /*!!!!!!!!!!!!!!!!!!!!!!!! habitos saudaveis !!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-
     .mainzinho{
-    
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    background-image: url(imgs/6.jpg);
+        background-image: url(imgs/6.jpg);
+    }
 
-    display: flex;               
-    justify-content: center;     
-    align-items: center;   
-
-
-}
-.mainzinho nav h1{
-    color: #0d192b;
-   
-    border-radius: 15px;
-    padding: 10px 10px 40px 10px;
-
-}
-.mainzinho nav h2{
-    color: #0d192b;
-}
-.spanzinho{
-    font-weight: 700;
-        border-radius: 30px;
-        background-color: #3b657a;
-        color: white;
-        padding: 20px 40px;
-        text-align: center;
-        
-}
-p{
-    text-align: center;
-    color: black;
-}
-.botuoes{
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-.mainzinho nav p{
-    color: #0d192b;
-    font-weight: 600;
-    background-color: azure;
-    border-radius: 50px;
-    font-size: 40px;
-    padding: 10px 10px 10px 10px;
-    margin: 70px 30px 30px 30px;
-}
 .recomendado{
     background-image: url(imgs/6.jpg);
     margin: 0;
@@ -161,5 +97,13 @@ p{
 .recomendado h1{
     padding: 20px 400px 400px 400px;
     text-align: center;
+}
+.banner {
+    background-image: url(imgs/6.jpg);
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;  
+    min-height: 100vh;             
+    padding: 50px 0;               
 }
 

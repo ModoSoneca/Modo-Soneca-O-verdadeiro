@@ -6,47 +6,55 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Modo Soneca</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/doecas.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 <style>
-    html{
-        background: #ede8d0;
-        
-    }
-    
+   
     .banner h2{
-        font-size: 2.25rem;
         text-align: center;
-        margin-top: 3vw;
+        font-weight: bold;
+        font-size: 2.25rem;
+        color: #3b657a;
+        margin-top: 2vw;
         
     }
     
-    .banner div{
-        background-color: #3b657a;
-        display: flex;
-        justify-content: space-between;
-        
-    }
-    .banner div p{
-        color: white;
-        
-    }
-
-.insonia{
-    font-size: 1.5rem;
-
+   .banner .conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    gap: 2rem; 
+    margin: 5vw;
 }
-.insonia p{
-    margin: 7.5vw;
-    background-color: #3b657a;
-    padding: 15px;
+
+.banner .conteudo p {
     color: white;
+    font-size: 1.5rem;
+    background-color: #3b657a;
+    padding: 10px;
     border-radius: 10px;
-    
+    width: 50%; 
+}
+
+.banner .conteudo img {
+    width: 45%;
+    border-radius: 5px;
+
 
 }
+ .banner p{
+    margin: 5vw;
+    background-color: #3b657a;
+    padding: 10px;
+    width: 50%;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+
 </style>
     <header>
         <h1 class="ain"><a href="home.html">MS</a></h1>
@@ -77,10 +85,8 @@
     <main>
         <section class="banner">
             <h2>Insônia:</h2>
-            <div>
-                
-                    <p>
-                        A insônia é um disturbio que dificulta à adormecer, Manter-se dormindo ou acordar muito cedo,
+            <div class="conteudo">
+                <p>            A insônia é um disturbio que dificulta à adormecer, Manter-se dormindo ou acordar muito cedo,
                         isso resulta num sono insuficiente e de má qualidade afetando o funcionamento diurno.
                     
                         Esse disturbio pode ser temporario ou persistente, pode ter muitas causas variadas sendo alguns
@@ -88,12 +94,11 @@
 
                    Alguns fatores como a ansiedade e a depressão podem causar a insônia. Problemas hormonais também
                         causam a insônia.</p>
+                <img src="img/insonia imagem feia.png" alt="">
                 
             </div>
 
-        </section>
-
-        <section class="insonia">
+        
             <p>Falando mais realisticamente a insônia é algo muito grave, pessoas afetadas com ela podem acabar
                 desenvolvendo outras doenças.<br>
                 Algumas dessas doenças são as <span>doenças cardiovasculares (AVC e Infarto)</span>, diabetes,
