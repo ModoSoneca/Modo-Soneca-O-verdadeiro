@@ -8,7 +8,59 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+<style>
+.mainzinho {
+    height: 100vh;
+    
+    background-size: cover;
+    background-position: center;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.conteudo {
+    background: rgba(255, 255, 255, 0.3); 
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(4px); /* dá um charme moderno */
+}
+
+.peq {
+    font-size: 1.5rem;
+}
+
+.chamada {
+    margin-top: 20px;
+    font-size: 1.4rem;
+    color: #0d192b;
+    font-weight: 600;
+}
+
+.botuoes {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.botao {
+    background-color: #3b657a;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #274755;
+}
+
+</style>
 <body>
     <header>
         <h1 class="ain"><a href="home.html">MS</a></h1>
@@ -18,7 +70,7 @@
                     <a href="home.html">Home</a>
                 </li>
                 <li>
-                    <a href="doenças.html">Doenças do sono</a>
+                    <a href="doenças.html">Insônia</a>
                 </li>
                 <li>
                     <a href="habitos.html">Hábitos saúdaveis</a>
@@ -37,6 +89,7 @@
 
     </header>
     <main class="mainzinho">
+<<<<<<< HEAD
         <nav class="titulo-container">
             <h1>MODO SONECA <br><span class="peq"> Pequenas rotinas, grandes resultados</span></h1>
             <p>clique no que deseja saber mais!</p>
@@ -48,8 +101,19 @@
     <a href="recomendado.html" class="btn btn-white btn-animated">Evitar</a> 
    
 </div>
+=======
+    <div class="conteudo">
+        <h1>MODO SONECA <br><span class="peq">Pequenas rotinas, grandes resultados</span></h1>
+>>>>>>> a0df6f65b6f9f40eababab3667331dd594ea1265
 
-    </main>
+        <p class="chamada">Clique no que deseja saber mais!</p>
+
+        <div class="botuoes">
+            <a href="recomendado.html" class="botao">Recomendado</a>
+            <a href="evitar.html" class="botao">Evitar</a>
+        </div>
+    </div>
+</main>
 
 </body>
 
