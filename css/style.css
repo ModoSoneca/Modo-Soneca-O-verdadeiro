@@ -55,6 +55,18 @@ main.pintos {
 
 
 }
+.pintos{
+    position: relative;
+
+}
+.titulo-container{
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+}
 .oier {
     font-size: 6rem;
     padding: 20px;
@@ -170,5 +182,5 @@ main.pintos {
     }
 }
 
-                                                   /*recomendado*/
+ 
 
