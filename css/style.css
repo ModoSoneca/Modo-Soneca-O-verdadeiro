@@ -36,7 +36,7 @@ html {
     font-size: 2rem;
 }
 
-main.pintos {
+main.oie {
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -55,7 +55,7 @@ main.pintos {
 
 
 }
-.pintos{
+.oie{
     position: relative;
 
 }
@@ -166,7 +166,7 @@ main.pintos {
 }
 
 .btn-animated {
-    animation: moveInBottom 5s ease-out;
+    animation: moveInBotdo Sonecatom 5s ease-out;
     animation-fill-mode: backwards;
 }
 
@@ -181,6 +181,8 @@ main.pintos {
         transform: translateY(0px);
     }
 }
-
+.titulo-container h2{
+font-size: 30px;
+}
  
 
