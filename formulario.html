@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perguntas</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+
+    <h2>Questionário do Sono</h2>
+
+    <form id="formSono">
+        <label>Que horas você vai dormir? (0–23)</label><br />
+        <input type="number" id="horaDormir" min="0" max="23" required /><br /><br />
+
+        <label>Você tem dificuldade pra dormir?</label><br />
+        <input type="text" id="dificuldadeDormir" /><br /><br />
+
+        <label>Você toma café antes de dormir?</label><br />
+        <select id="cafeDormir">
+            <option value="S">Sim</option>
+            <option value="N">Não</option>
+        </select><br /><br />
+
+        <label>Você toma álcool antes de dormir?</label><br />
+        <input type="text" id="alcoolDormir" /><br /><br />
+
+        <label>Você usa telas antes de dormir?</label><br />
+        <input type="text" id="telaDormir" /><br /><br />
+
+        <label>Você tem relação sexual antes de dormir?</label><br />
+        <input type="text" id="sexoDormir" /><br /><br />
+
+        <label>Você faz atividade física?</label><br />
+        <input type="text" id="fisicaDormir" /><br /><br />
+
+        <label>Você tem insônia ou apneia do sono?</label><br />
+        <input type="text" id="doencaDormir" /><br /><br />
+
+        <label>Que horas você costuma acordar? (0–23)</label><br />
+        <input type="number" id="horaAcorda" min="0" max="23" required /><br /><br />
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <p id="resultado"></p>
+
+    <script src="script.js">
+        document.getElementById("formSono").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const horaDormir = Number(document.getElementById("horaDormir").value);
+            const dificuldadeDormir = document.getElementById("dificuldadeDormir").value;
+            const cafeDormir = document.getElementById("cafeDormir").value.toUpperCase().charAt(0);
+            const alcoolDormir = document.getElementById("alcoolDormir").value;
+           const telaDormir = document.getElementById("telaDormir").value;
+           
+           
+         const sexoDormir = document.getElementById("sexoDormir").value;
+          
+          
+        const fisicaDormir = document.getElementById("fisicaDormir").value;
+          
+          
+        const doencaDormir = document.getElementById("doencaDormir").value;
+           
+                       const horaAcorda = Number(document.getElementById("horaAcorda").value);
+
+         document.getElementById("resultado").innerText =
+                "Dados recebidos! Hora de dormir: " + horaDormir + ", Hora de acordar: " + horaAcorda;
+        });
+    </script>
+</body>
+
+</html>
