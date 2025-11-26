@@ -8,52 +8,106 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
 <style>
-  main{
-    background-image: url(css/imgs/6.jpg);
-    background-size: cover;        
-    background-position: center;   
-    background-repeat: no-repeat;  
-    min-height: 100vh;             
-    padding: 50px 0;               
+/* --- BACKGROUND DO MAIN --- */
+main {
+    background-image: url("css/imgs/6.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 50px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.h13{
-  font-size: 80px;
-  text-align: center;
-  color: #003f69;
+
+/* --- TÍTULO --- */
+.h13 {
+    font-size: clamp(2.2rem, 6vw, 4.5rem);
+    text-align: center;
+    color: #003f69;
+    margin-bottom: 20px;
 }
-input{
-background-color: aliceblue;
-border: none;
-border-radius: 30px;
-padding: 10px;
-color: #003f69;
+
+/* --- FORMULÁRIO --- */
+form {
+    width: 100%;
+    max-width: 600px;     /* agora não estoura no PC */
+    background-color: #98bed1;
+    padding: 30px;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
 }
-label{
-  font-size: 25px;
-  color: #003f69;
+
+label {
+    display: block;
+    font-size: clamp(1rem, 2.5vw, 1.6rem);
+    color: #003f69;
+    margin-bottom: 10px;
 }
-form{
-  text-align: center;
-  margin: 30px;
-  background-color: #98bed1;
-  padding: 30px;
-  margin: 10px 600px 30px 600px;
-  border-radius: 100px;
+
+input,
+select {
+    width: 100%;
+    background-color: aliceblue;
+    border: none;
+    border-radius: 30px;
+    padding: 12px;
+    color: #003f69;
+    font-size: 1rem;
+    margin-bottom: 25px;
 }
-select{
-background-color: aliceblue;
-border: none;
-border-radius: 30px;
-padding: 10px;
-color: #003f69;
+
+button {
+    background-color: #003f69;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 25px;
+    color: aliceblue;
+    font-size: 1.1rem;
+    cursor: pointer;
 }
-button{
-  background-color: #003f69;
-border: none;
-border-radius: 30px;
-padding: 12px;
-color: aliceblue;
+
+/* --- RESPONSIVIDADE DO HEADER --- */
+header {
+    background-color: #3b657a;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
+
+header ol {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+header a {
+    color: white;
+}
+
+/* --- CELULARES (até 600px) --- */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header ol {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    form {
+        padding: 20px;
+        border-radius: 25px;
+    }
+}
+
 </style>
   <body>
 

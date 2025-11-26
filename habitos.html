@@ -3,119 +3,188 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modo Soneca</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-</head>
-<style>
-.mainzinho {
-    
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-     background-image: url(css/imgs/6.jpg);
-    margin: 0;
-    padding: 0;
-    height: 100vh;
 
+    <style>
+        .mainzinho {
+            background-image: url("css/imgs/6.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+   * {
+  box-sizing: border-box;
 }
-
 .conteudo {
-    border-radius: 20px;
+  width: 90%;
+  max-width: 900px; 
+  margin: 0 auto;  
+  padding: 20px;
 }
-
-.peq {
-    font-size: 1.5rem;
-    font-size: 1.5rem;
-    display: block;
-    margin-top: -20px; /* sobe o texto e remove o “espaço em volta” */
-    padding: 30px 30px 30px 30px;
-}
-.peq1 {
-    font-size: 1.5rem;
-    font-size: 1.5rem;
-    display: block;
-    margin-top: -20px; /* sobe o texto e remove o “espaço em volta” */
-    padding: 30px 30px 30px 30px;
-}
-
-
-.chamada {
-    margin-top: 20px;
-    font-size: 1.4rem;
-    color:#003f69;
-    font-weight: 600;
-}
-
 .botuoes {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;    
+  display: block;            
+  width: 320px;             
+  max-width: 90%;            
+  margin: 0 auto;            
+  padding: 15px 20px;       
+  text-align: center;
+  box-sizing: border-box;
 }
+@media (max-width: 600px) {
+  .conteudo {
+    max-width: 360px;
+    padding: 12px;
+  }
 
-.botao {
-    background-color: #3b657a;
-    color: white;
-    padding: 15px 40px;
-    border-radius: 30px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: 0.3s;
-}
+  .botuoes {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.botao:hover {
-    background-color: #274755;
+  .botao {
+    width: 100%;    
+    max-width: 320px;  
+  }
 }
-.conteudo h1{
-    color: #003f69;
-    font-size: 9rem;
-}
+        .conteudo h1 {
+            color: #003f69;
+            font-size: clamp(2.8rem, 7vw, 9rem);
+            line-height: 1.1;
+        }
+        .peq1 {
+            font-size: clamp(1.2rem, 3vw, 2.2rem);
+            display: block;
+            margin-top: -10px;
+            padding: 20px 10px;
+        }
+        .chamada {
+            margin-top: 10px;
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            color: #003f69;
+            font-weight: 600;
+        }
+                .botuoes {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .botao {
+            background-color: #3b657a;
+            color: white;
+            padding: 15px 40px;
 
-</style>
+            border-radius: 30px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: 0.3s;
+
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+        }
+        .botao:hover {
+            background-color: #274755;
+        }
+        header {
+            background-color: #3b657a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            flex-wrap: wrap;
+        }
+        header ol {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        header a {
+            color: white;
+            text-decoration: none;
+        }
+        @media (max-width: 600px) {
+            .conteudo {
+                width: 100%;
+                max-width: 350px;
+                margin: 0 auto;
+                padding: 10px;
+            }
+            .botuoes {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+
+            .botao {
+                width: 100%;
+                max-width: 300px;
+            }
+            header {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            header ol {
+                justify-content: center;
+            }
+        }
+
+    </style>
+</head>
+
 <body>
+
     <header>
         <h1 class="ain"><a href="home.html">MS</a></h1>
+
         <nav>
             <ol>
-                <li>
-                    <a href="home.html">Home</a>
-                </li>
-                <li>
-                    <a href="doenças.html">Insônia</a>
-                </li>
-                <li>
-                    <a href="habitos.html">Hábitos saúdaveis</a>
-                </li>
-                <li>
-                    <a href="videos.html">Videos</a>
-                </li>
-                <li>
-                    <a href="ata.html">Atas</a>
-                </li>
-                <li>
-                    <a href="sobrenos.html">Sobre nós</a>
-                </li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="doenças.html">Insônia</a></li>
+                <li><a href="habitos.html">Hábitos saúdaveis</a></li>
+                <li><a href="videos.html">Vídeos</a></li>
+                <li><a href="ata.html">Atas</a></li>
+                <li><a href="sobrenos.html">Sobre nós</a></li>
             </ol>
         </nav>
-
     </header>
+
     <main class="mainzinho">
-    <div class="conteudo">
-        <h1>Hábitos Saúdaves <br> <span class="peq1"> Pequenas rotinas, grandes resultados</span></h1>
+        <div class="conteudo">
+            <h1>
+                Hábitos Saudáveis <br>
+                <span class="peq1">Pequenas rotinas, grandes resultados</span>
+            </h1>
 
-        <p class="chamada">Clique no que deseja saber mais!</p>
+            <p class="chamada">Clique no que deseja saber mais!</p>
 
-        <div class="botuoes">
-            <a href="recomendado.html" class="botao">Recomendado</a>
-            <a href="evitarofc.html" class="botao">Evitar</a>
+            <div class="botuoes">
+                <a href="recomendado.html" class="botao">Recomendado</a>
+                <a href="evitarofc.html" class="botao">Evitar</a>
+            </div>
         </div>
-    </div>
-</main>
+    </main>
 
 </body>
 
