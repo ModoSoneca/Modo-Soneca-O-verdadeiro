@@ -184,5 +184,8 @@ main.oie {
 .titulo-container h2{
 font-size: 30px;
 }
- 
-
+.buto{
+    display: grid;
+    gap: 20px;
+    margin: 300px 300px 0px 300px;
+}    

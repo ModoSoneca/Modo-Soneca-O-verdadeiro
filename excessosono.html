@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Excesso de Sono</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+       p{
+        font-size: 40px;
+        font-weight: 600;
+        text-align: center;
+        padding: 200px 400px 0px 400px;
+        color: #003f69;
+    }
+     main {
+    background-image: url(css/imgs/6.jpg);
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;  
+    min-height: 100vh;             
+    padding: 50px 0;               
+}
+.destaquee {
+    font-weight: bold;
+    color: red;
+}
+.h18{
+    font-size: 70px;
+    text-align: center;
+    margin: 30px;
+    color: #003f69;
+}
+    .text-box {
+margin: 50px 1000px 30px 800px;
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #3b657a;
+    color: aliceblue;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color:#003f69;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+           <h1 class="ain"><a href="home.html">MS</a></h1>
+        <nav>
+            <ol>
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+                <li>
+                    <a href="doenças.html">Insônia</a>
+                </li>
+                <li>
+                    <a href="habitos.html">Hábitos saúdaveis</a>
+                </li>
+                <li>
+                    <a href="videos.html">Videos</a>
+                </li>
+                <li>
+                    <a href="ata.html">Atas</a>
+                </li>
+                <li>
+                    <a href="sobrenos.html">Sobre nós</a>
+                </li>
+            </ol>
+        </nav>
+    </header>
+<main>
+    <h1 class="h18">Alerta de Excesso de Sono</h1>
+    <p id="resultado"></p>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const horas = Number(params.get("horas"));
+
+        let msg = "";
+
+        if (horas > 10) {
+            msg = `Você dormiu <span class="destaquee">${horas} horas</span>. Isso é um valor muito alto e pode indicar cansaço extremo ou outros fatores!`;
+        } else {
+            msg = `Horas inválidas ou insuficientes para classificar como excesso.`;
+        }
+
+        document.getElementById("resultado").innerHTML = msg;
+    </script>
+      <div class="text-box">
+    <a href="habitos.html" class="btn btn-white btn-        animate">Melhorar meu sono</a>
+</div>
+</main>
+</body>
+</html>

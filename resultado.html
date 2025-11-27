@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    p{
+        font-size: 40px;
+        font-weight: 600;
+        text-align: center;
+        padding: 300px;
+        color: #003f69;
+    }
+     main {
+    background-image: url(css/imgs/6.jpg);
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;  
+    min-height: 100vh;             
+    padding: 50px 0;               
+}
+.destaque {
+    font-weight: bold;
+    color: green;
+}
+.destaquee {
+    font-weight: bold;
+    color: red;
+}
+.text-box {
+    margin: 50px auto;
+text-align: center;
+align-items: center;}
+
+
+.btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #3b657a;
+    color: aliceblue;
+    border: none;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #003f69;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 1s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+button{
+    align-items: center;
+    text-align: center;
+}
+#botaoBom {
+
+    margin: 0px 800px 0px 800px ; 
+}
+#botaoRuim{
+
+     margin: 0px 800px 0px 800px ; 
+
+}
+
+</style>
+<header>
+      <h1 class="ain"><a href="home.html">MS</a></h1>
+        <nav>
+            <ol>
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+                <li>
+                    <a href="doenças.html">Insônia</a>
+                </li>
+                <li>
+                    <a href="habitos.html">Hábitos saúdaveis</a>
+                </li>
+                <li>
+                    <a href="videos.html">Videos</a>
+                </li>
+                <li>
+                    <a href="ata.html">Atas</a>
+                </li>
+                <li>
+                    <a href="sobrenos.html">Sobre nós</a>
+                </li>
+            </ol>
+        </nav>
+
+</header>
+<body>
+    <main>
+
+<p id="resultado"></p>
+
+<button id="botaoBom" class="btn btn-white btn-animated" style="display:none;">
+    <a href="habitos.html">Continuar</a>
+</button>
+
+<button id="botaoRuim" class="btn btn-white btn-animated" style="display:none;">
+    <a href="doenças.html">Saiba mais</a>
+</button>
+
+  <script>
+ const params = new URLSearchParams(window.location.search);
+const horas = Number(params.get("horas")) || 0;
+
+const res = document.getElementById("resultado");
+
+if (horas >= 7) {
+    res.innerHTML = `Você dormiu ${horas} horas. Isso é <span class="destaque">MUITO BOM</span>!`;
+    document.getElementById("botaoBom").style.display = "inline-block";
+
+} else {
+    res.innerHTML = `Você dormiu ${horas} horas. Isso é <span class="destaquee">MUITO RUIM</span>!`;
+    document.getElementById("botaoRuim").style.display = "inline-block";
+}
+
+  </script>
+
+</main>
+</body>
+</html>

@@ -4,94 +4,213 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Perguntas</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
+<style>
+/* --- BACKGROUND DO MAIN --- */
+main {
+    background-image: url("css/imgs/6.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 50px 20px;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- TÍTULO --- */
+.h13 {
+    font-size: clamp(2.2rem, 6vw, 4.5rem);
+    text-align: center;
+    color: #003f69;
+    margin-bottom: 20px;
+}
+
+/* --- FORMULÁRIO --- */
+form {
+    width: 100%;
+    max-width: 600px;     /* agora não estoura no PC */
+    background-color: #98bed1;
+    padding: 30px;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+}
+
+label {
+    display: block;
+    font-size: clamp(1rem, 2.5vw, 1.6rem);
+    color: #003f69;
+    margin-bottom: 10px;
+}
+
+input,
+select {
+    width: 100%;
+    background-color: aliceblue;
+    border: none;
+    border-radius: 30px;
+    padding: 12px;
+    color: #003f69;
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+button {
+    background-color: #003f69;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 25px;
+    color: aliceblue;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+/* --- RESPONSIVIDADE DO HEADER --- */
+header {
+    background-color: #3b657a;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header ol {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+header a {
+    color: white;
+}
+
+/* --- CELULARES (até 600px) --- */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header ol {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    form {
+        padding: 20px;
+        border-radius: 25px;
+    }
+}
+
+</style>
   <body>
-    <!DOCTYPE html>
 
-    <h2>Questionário do Sono</h2>
+<header>
+        <h1 class="ain"><a href="home.html">MS</a></h1>
+        <nav>
+            <ol>
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+                <li>
+                    <a href="doenças.html">Insônia</a>
+                </li>
+                <li>
+                    <a href="habitos.html">Hábitos saúdaveis</a>
+                </li>
+                <li>
+                    <a href="videos.html">Videos</a>
+                </li>
+                <li>
+                    <a href="ata.html">Atas</a>
+                </li>
+                <li>
+                    <a href="sobrenos.html">Sobre nós</a>
+                </li>
+            </ol>
+        </nav>
 
-    <form id="formSono">
-      <label>Que horas você costuma acordar? (0–23)</label><br />
-      <input
-        type="number"
-        id="horaAcorda"
-        min="0"
-        max="23"
-        required
-      /><br /><br />
+    </header>
+    <main>
+    <h1 class="h13">Questionário do Sono</h1>
+<form id="formSono" class="formss">
 
-      <label>Que horas você vai dormir? (0–23)</label><br />
-      <input
-        type="number"
-        id="horaDormir"
-        min="0"
-        max="23"
-        required
-      /><br /><br />
+    <label>Que horas você vai dormir? (0–23)</label><br>
+    <input type="number" id="horaDormir" min="0" max="23" required><br><br>
 
-      <label>Você tem dificuldade pra dormir?</label><br />
-      <input type="text" id="dificuldadeDormir" /><br /><br />
+    <label>Você tem dificuldade pra dormir?</label><br>
+    <select id="dificuldadeDormir">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+    </select><br><br>
 
-      <label>Você toma café antes de dormir?</label><br />
-      <select id="cafeDormir">
-        <option value="S">Sim</option>
-        <option value="N">Não</option></select
-      ><br /><br />
+    <label>Você toma café antes de dormir?</label><br>
+    <select id="cafeDormir">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+    </select><br><br>
 
-      <label>Você toma álcool antes de dormir?</label><br />
-      <input type="text" id="alcoolDormir" /><br /><br />
+    <label>Você toma álcool antes de dormir?</label><br>
+    <select id="alcoolDormir">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+    </select><br><br>
 
-      <label>Você usa telas antes de dormir?</label><br />
-      <input type="text" id="telaDormir" /><br /><br />
+    <label>Você usa telas antes de dormir?</label><br>
+    <select id="telaDormir">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+    </select><br><br>
 
-      <label>Você tem relação sexual antes de dormir?</label><br />
-      <input type="text" id="sexoDormir" /><br /><br />
+    <label>Você tem relação sexual antes de dormir?</label><br>
+    <select id="sexoDormir">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+    </select><br><br>
 
-      <label>Você faz atividade física?</label><br />
-      <input type="text" id="fisicaDormir" /><br /><br />
+    <label>Você faz atividade física?</label><br>
+    <select id="fisicaDormir">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+    </select><br><br>
 
-      <label>Você tem insônia ou apneia do sono?</label><br />
-      <input type="text" id="doencaDormir" /><br /><br />
+    <label>Você tem insônia ou apneia do sono?</label><br>
+    <select id="doencaDormir">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+    </select><br><br>
 
-      <button type="submit">Enviar</button>
-    </form>
+    <label>Que horas você costuma acordar? (0–23)</label><br>
+    <input type="number" id="horaAcorda" min="0" max="23" required><br><br>
 
-    <p id="resultado"></p>
+    <button type="submit">Enviar</button>
+</form>
 
-    <script src="script.js">
-      document.getElementById("formSono").addEventListener("submit", function (event) {
-          event.preventDefault();
+<p id="resultado"></p>
 
-        const horaDormir = Number(document.getElementById("horaDormir").value);
-
-
-        const dificuldadeDormir = document.getElementById("dificuldadeDormir").value;
-
-
-        const cafeDormir = document.getElementById("cafeDormir").value.toUpperCase().charAt(0);
-
-
-        const alcoolDormir = document.getElementById("alcoolDormir").value;
-
-        const telaDormir = document.getElementById("telaDormir").value;
-
-
-        const sexoDormir = document.getElementById("sexoDormir").value;
-
-
-        const fisicaDormir = document.getElementById("fisicaDormir").value;
-
-
-        const doencaDormir = document.getElementById("doencaDormir").value;
-        
-        
-        const horaAcorda = Number(document.getElementById("horaAcorda").value);
-
-       
-        document.getElementById("resultado").innerText =
-              "Dados recebidos! Hora de dormir: " + horaDormir + ", Hora de acordar: " + horaAcorda;
-      });
-    </script>
+</main>
+    <script>
+document.getElementById("formSono").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const dificuldade = document.getElementById("dificuldadeDormir").value.toLowerCase();
+    const horaDormir = Number(document.getElementById("horaDormir").value);
+    const horaAcorda = Number(document.getElementById("horaAcorda").value);
+    let horasDormidas = horaAcorda - horaDormir;
+    if (horasDormidas < 0) {
+        horasDormidas += 24;
+    }
+    if (horasDormidas > 10) {
+        window.location.href = `excessosono.html?horas=${horasDormidas}`;
+        return;
+    }
+    window.location.href = `resultado.html?horas=${horasDormidas}`;
+});
+</script>
   </body>
 </html>
