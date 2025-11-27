@@ -189,3 +189,97 @@ font-size: 30px;
     gap: 20px;
     margin: 300px 300px 0px 300px;
 }    
+
+
+
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    ol {
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    a {
+        font-size: 18px;
+    }
+
+    /* MAIN / HOME */
+    main.oie {
+        background-position: center;
+        height: auto;
+        padding: 80px 20px;
+        text-align: center;
+    }
+
+    .titulo-container {
+        position: static;
+        transform: none;
+        margin-bottom: 20px;
+    }
+
+    .oier,
+    main h1 {
+        font-size: 2.8rem;
+        position: static;
+        transform: none;
+    }
+
+    .button,
+    .btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+        position: static;
+    }
+
+    .buto {
+        margin: 50px 20px 0 20px;
+        grid-template-columns: 1fr;
+    }
+
+    /* RECOMENDADO / SEÇÕES ALTAS */
+    .recomendado {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .recomendado h1 {
+        padding: 0;
+        margin: 20px 0;
+        font-size: 2rem;
+    }
+
+    /* BANNERS */
+    .banner {
+        min-height: 60vh;
+        padding: 20px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .titulo-container h2 {
+        font-size: 1.5rem;
+    }
+
+    /* FONTES GERAIS */
+    :root {
+        font-size: 16px; /* simplifica tudo no mobile */
+    }
+
+    /* PARA EVITAR IMAGENS DISTORCIDAS */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+}
