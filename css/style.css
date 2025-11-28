@@ -40,11 +40,8 @@ main.oie {
     margin: 0;
     padding: 0;
     height: 100vh;
-    /* ocupa toda a altura da tela */
     background-image: url(imgs/809792f1-908b-499c-a7c7-881e40688063.png);
-    /* caminho da sua imagem */
     background-size: cover;
-    /* ajusta a imagem para cobrir toda a tela */
     background-position: center;
     display: flex;
     align-items: center;
@@ -194,8 +191,6 @@ font-size: 30px;
 
 
 @media (max-width: 768px) {
-
-    /* HEADER */
     header {
         flex-direction: column;
         text-align: center;
@@ -211,8 +206,6 @@ font-size: 30px;
     a {
         font-size: 18px;
     }
-
-    /* MAIN / HOME */
     main.oie {
         background-position: center;
         height: auto;
@@ -244,8 +237,6 @@ font-size: 30px;
         margin: 50px 20px 0 20px;
         grid-template-columns: 1fr;
     }
-
-    /* RECOMENDADO / SEÇÕES ALTAS */
     .recomendado {
         flex-direction: column;
         height: auto;
@@ -258,8 +249,6 @@ font-size: 30px;
         margin: 20px 0;
         font-size: 2rem;
     }
-
-    /* BANNERS */
     .banner {
         min-height: 60vh;
         padding: 20px;
@@ -270,16 +259,92 @@ font-size: 30px;
     .titulo-container h2 {
         font-size: 1.5rem;
     }
-
-    /* FONTES GERAIS */
     :root {
-        font-size: 16px; /* simplifica tudo no mobile */
+        font-size: 16px;
     }
-
-    /* PARA EVITAR IMAGENS DISTORCIDAS */
     img {
         max-width: 100%;
         height: auto;
     }
 
+}
+/* --------------------- FOOTER --------------------- */
+
+.footer {
+    background-color: #003f69;
+    color: #fff;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.footer-left h2 {
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+
+.footer-middle h3,
+.footer-right h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.footer-middle ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-middle ul li {
+    margin: 6px 0;
+}
+
+.footer-middle ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-middle ul li a:hover,
+.social-icons a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+
+@media (max-width: 700px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .social-icons {
+        flex-direction: row;
+        gap: 15px;
+    }
 }
