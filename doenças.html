@@ -7,10 +7,7 @@
     <title>Modo Soneca</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-<style>
+    <style>
    
     .banner h1{
         text-align: center;
@@ -57,10 +54,111 @@
    color: white;
     font-size: 1.5rem;
 }
+/* =========================
+      RESPONSIVIDADE GERAL
+   ========================= */
+@media (max-width: 1100px) {
+
+    .banner h1 {
+        font-size: 4rem;
+        margin-top: 20px;
+        padding: 0 20px;
+    }
+
+    .conteudo {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+        margin: 20px;
+        border-radius: 40px;
+    }
+
+    .banner .conteudo img {
+        width: 80%;
+        margin: 20px auto;
+        border-radius: 40px;
+    }
+
+    .banner .conteudo .pe {
+        font-size: 1.4rem;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .pexinho {
+        margin: 20px;
+        padding: 20px;
+        border-radius: 40px;
+        font-size: 1.3rem;
+    }
+
+    header nav ol {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    header nav ol li a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .ain {
+        margin: 10px 0;
+    }
+
+    header nav ol {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .banner h1 {
+        font-size: 2.8rem;
+    }
+
+    .conteudo {
+        margin: 15px;
+        padding: 20px;
+        border-radius: 25px;
+    }
+
+    .banner .conteudo img {
+        width: 100%;
+        border-radius: 25px;
+    }
+
+    .pexinho {
+        margin: 15px;
+        padding: 20px;
+        font-size: 1.1rem;
+        border-radius: 25px;
+    }
+
+    /* FOOTER */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}
+
 
 
 
 </style>
+</head>
+
+<body>
+
     <header>
         <h1 class="ain"><a href="index.html">MS</a></h1>
         <nav>
@@ -100,7 +198,7 @@
 
                    Alguns fatores como a ansiedade e a depressão podem causar a insônia. Problemas hormonais também
                         causam a insônia.</p>
-                <img src="img/insonia imagem feia.png" alt="">
+                <img src="img/insoniaimagemfeia.png" alt="">
                 
             </div>
 
