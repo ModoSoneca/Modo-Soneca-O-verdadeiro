@@ -3,78 +3,183 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modo Soneca</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<style>
-    .sobreProjeto h1{
-        text-align: center;
-        color: #3b657a;
-        font-size: 2.25rem;
-        motion: 50%;
-    }
-    .sobreProjeto p{
-        background-color: #3b657a;
-        color: white;
-        padding: 10px;
-        border-radius: 10px;
-        margin: 5vw;
-        font-size: 1.5rem;
-    }
-   
-
-
-    .criadores h1{
-        color: #3b657a;
-        font-size: 2.25rem;
-        text-align: center;
-    }
-     
-
-    .criadores img{
-        width: 15%;
-        border-radius: 10px;
-        
-    }
-    
-    .criadores ul li{
-        background-color: #3b657a;
-        margin: 5vw 2vw 5vw 2vw;
-        padding: 10px;
-        border-radius: 10px;
-    }
-    .criadores h2{
-        font-size: 1.75rem;
-        color: white;
-        margin: 2vw;
+    <style>
+        /* Geral */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
         }
-    .criadores  ul li p{
-        color: white;
-        font-size: 1.25rem;
-    }
-    .btPaginas{
-        display: block;
-        margin: 5vw;
-    }
 
-    .btPaginas a{
-        color: color-mix(in srgb, white 99%, #3b657a 1%);
-        background-color: #3b657a;
-        padding: 15px;
-        border-radius: 10px;
-    }
-</style>
-      <header>
+        /* Títulos e textos */
+        .sobreProjeto h1 {
+            text-align: center;
+            color: #3b657a;
+            font-size: 3rem;
+            padding: 20px;
+        }
+
+        .sobreProjeto p {
+            background-color: #3b657a;
+            color: white;
+            padding: 15px;
+            border-radius: 100px;
+            margin: 30px 10%;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        main {
+            background-image: url(css/imgs/6.jpg);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .criadores h1 {
+            color: #003f69;
+            font-size: 3rem;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .criadores img {
+            width: 40%;
+            border-radius: 100px;
+        }
+
+        .criadores ul {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0;
+        }
+
+        .criadores ul li {
+            background-color: #003f69;
+            padding: 20px;
+            border-radius: 1000px;
+            text-align: center;
+            width: 250px;
+            margin: 20px;
+            transition: transform 0.3s;
+        }
+
+        .criadores ul li:hover {
+            transform: scale(1.05);
+        }
+
+        .criadores h2 {
+            font-size: 1.75rem;
+            color: white;
+            margin: 1vw;
+        }
+
+        .criadores ul li p {
+            color: white;
+            font-size: 1.25rem;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .btPaginas {
+            display: block;
+            margin: 5vw;
+            text-align: center;
+        }
+
+        .btPaginas a {
+            color: color-mix(in srgb, white 99%, #3b657a 1%);
+            background-color: #3b657a;
+            padding: 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .arthu p {
+            margin: 40px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .sobreProjeto h1 {
+                font-size: 2rem;
+            }
+
+            .sobreProjeto p {
+                font-size: 1.2rem;
+                margin: 20px;
+            }
+
+            .criadores h1 {
+                font-size: 2.5rem;
+            }
+
+            .criadores img {
+                width: 60%;
+            }
+
+            .criadores ul {
+                flex-direction: column;
+            }
+
+            .criadores ul li {
+                width: 80%;
+                margin: 20px auto;
+            }
+
+            .btPaginas a {
+                font-size: 1rem;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sobreProjeto h1 {
+                font-size: 1.5rem;
+            }
+
+            .sobreProjeto p {
+                font-size: 1rem;
+                margin: 15px;
+            }
+
+            .criadores h1 {
+                font-size: 2rem;
+            }
+
+            .criadores img {
+                width: 80%;
+            }
+
+            .criadores ul li {
+                width: 90%;
+            }
+
+            .btPaginas a {
+                font-size: 1rem;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
         <h1 class="ain"><a href="index.html">MS</a></h1>
         <nav>
             <ol>
                 <li>
                     <a href="index.html">Home</a>
-                </li>    
- 
+                </li>
                 <li>
                     <a href="doenças.html">Insônia</a>
                 </li>
@@ -92,71 +197,49 @@
                 </li>
             </ol>
         </nav>
-
     </header>
 
-        <main>
-            <section class="sobreProjeto">
-                <h1>
-                    Sobre o Projeto
-                </h1>
-                <p>
-                    O Modo Soneca é um site feito por estudantes do IFC campus araquari com a proposta de ajudar principalmente os estudantes que tem dificuldade com o sono.
-                </p>
-                <p>
-                    Pensamos em criar o Modo Soneca como algo que possa não apenas ajudar os estudantes que vão ver ele, mas também que todas as pessoas possam se identificar tenha alguma ajuda - mesmo que pouca.
-                </p>
-                <p>
-                    Se você que está lendo se identificar, seguir as dicas e não conseguir melhorar o seu sono, procure um médico.
-                </p>
-            </section>
-            <section class="criadores">
-                <h1>Criadores do projeto</h1>
-                
-                
-                <ul>
-                    <li>
-                        <img src="img/OsCriaDoMODOSONECA/Pedro.jpg" alt="">
-                        <h2>Pedro Antonio Schetz Dias da Silva</h2>
-                        <p>
-                            Estudante do IFC, 15 anos, ajudou programando o site.
-                        </p>
-                    </li>
-                    <li>
-                        <img src="img/OsCriaDoMODOSONECA/Ana Carolina.jpg" alt="">
-                        <h2>Ana Carolini</h2>
-                        <p>
-                            Criou e fez ajudou nas redes sociais, 16 anos, estudante do IFC. 
-                        </p>
-                    </li>
-                    <li>
-                        <img src="img/OsCriaDoMODOSONECA/Irene .jpg" alt="">
-                        <h2>Irene Bittelbrun</h2>
-                        <p>
-                            Ajudou no site, criou as redes sociais, ajudou na parte criativa, 16 anos, estudante do IFC.
-                        </p>
-                    </li>
-                    <li>
-                        <img src="img/OsCriaDoMODOSONECA/otavio.jpg" alt="">
-                        <h2>Otavio Felipe de Oliveira</h2>
-                        <p>
-                            Ajudou marcando as atas, ajudou no site, 16 anos, Estudante do IFC.
-                        </p>
-                    </li>
-                    <li>
-                        <img src="img/OsCriaDoMODOSONECA/Arthur.jpg" alt="">
-                        <h2>Arthur Schmidt</h2>
-                        <p>
-                            Ajudou no site, 16 anos estudante do IFC, ajudou marcando as atas.
-                        </p>
-                    </li>
-                </ul>
-            </section>
-            <section class="btPaginas">
-                <a href="fontes.html">Fontes de pesquisa</a>
-            </section>
-        </main>
-       
+    <main>
+        <section class="sobreProjeto">
+            <h1>Sobre o Projeto</h1>
+            <p>O Modo Soneca é um site feito por estudantes do IFC campus araquari com a proposta de ajudar principalmente os estudantes que tem dificuldade com o sono.</p>
+            <p>Pensamos em criar o Modo Soneca como algo que possa não apenas ajudar os estudantes que vão ver ele, mas também que todas as pessoas possam se identificar tenha alguma ajuda - mesmo que pouca.</p>
+            <p>Se você que está lendo se identificar, seguir as dicas e não conseguir melhorar o seu sono, procure um médico.</p>
+        </section>
+        <section class="criadores">
+            <h1>Criadores do projeto</h1>
+            <ul>
+                <li>
+                    <img src="img/OsCriaDoMODOSONECA/Pedro.jpg" alt="">
+                    <h2>Pedro Schetz</h2>
+                    <p>Estudante do IFC, 15 anos, ajudou programando o site.</p>
+                </li>
+                <li>
+                    <img src="img/OsCriaDoMODOSONECA/Ana Carolina.jpg" alt="">
+                    <h2>Ana Carolini</h2>
+                    <p>Criou e fez ajudou nas redes sociais, 16 anos, estudante do IFC.</p>
+                </li>
+                <li>
+                    <img src="img/OsCriaDoMODOSONECA/Irene .jpg" alt="">
+                    <h2>Irene Bittelbrunn</h2>
+                    <p>Ajudou no site, criou as redes sociais, ajudou na parte criativa, 16 anos, estudante do IFC.</p>
+                </li>
+                <li>
+                    <img src="img/OsCriaDoMODOSONECA/otavio.jpg" alt="">
+                    <h2>Otavio de Oliveira</h2>
+                    <p>Ajudou marcando as atas, ajudou no site, 16 anos, Estudante do IFC.</p>
+                </li>
+                <li class="arthu">
+                    <img src="img/OsCriaDoMODOSONECA/Arthur.jpg" alt="">
+                    <h2>Arthur Schmidt</h2>
+                    <p>Ajudou no site, 16 anos estudante do IFC, ajudou marcando as atas.</p>
+                </li>
+            </ul>
+        </section>
+        <section class="btPaginas">
+            <a href="fontes.html">Fontes de pesquisa</a>
+        </section>
+    </main>
 </body>
 
 </html>
