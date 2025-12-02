@@ -3,96 +3,261 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evitar</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/evitar.css">
+    <link rel="stylesheet" href="css/style.css">
 
-    
+<style>
+/* ------------------ BASE ------------------ */
+
+:root {
+    --main-bg-color: brown;
+    font-size: clamp(0.9375rem, 0.9119rem + 0.1136vw, 1rem);
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ------------------ HEADER ------------------ */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: #3b657a;
+    padding: 15px 20px;
+}
+
+header nav ol {
+    display: flex;
+    gap: 20px;
+}
+
+.ain {
+    font-size: 2rem;
+}
+
+/* ------------------ MAIN ------------------ */
+
+.recomendado {
+    background-image: url(imgs/6.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    color: #003f69;
+    padding-bottom: 60px;
+}
+
+.h1s {
+    font-size: clamp(2.3rem, 4vw, 5rem);
+    font-weight: 700;
+    text-align: center;
+    margin: 40px 10px;
+}
+
+/* ------------------ CARDS ------------------ */
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
+}
+
+.recomendadoo {
+    background-color: #003f69;
+    color: aliceblue;
+    padding: 25px;
+    font-size: 18px;
+    border-radius: 25px;
+    width: 45%;
+    min-width: 280px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+/* ------------------ BOTÃO ------------------ */
+
+.text-box {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.btn {
+    text-transform: uppercase;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    background-color: #3b657a;
+    color: aliceblue;
+    position: static !important;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ------------------ FOOTER ------------------ */
+
+.footer {
+    background-color: #003f69;
+    color: #fff;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.footer-left h2 {
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+
+.footer-right h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ------------------ RESPONSIVIDADE ------------------ */
+
+@media (max-width: 900px) {
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header nav ol {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .recomendadoo {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    .h1s {
+        font-size: 2.6rem;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .recomendadoo {
+        width: 100%;
+        font-size: 0.95rem;
+    }
+
+    .h1s {
+        font-size: 2rem;
+    }
+
+    header nav ol a {
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        padding: 30px 15px;
+    }
+}
+</style>
 </head>
 
 <body>
-      <header>
-        <h1 class="ain"><a href="index.html">MS</a></h1>
-        <nav>
-            <ol>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>    
- 
-                <li>
-                    <a href="doenças.html">Insônia</a>
-                </li>
-                <li>
-                    <a href="habitos.html">Hábitos saúdaveis</a>
-                </li>
-                <li>
-                    <a href="videos.html">Videos</a>
-                </li>
-                <li>
-                    <a href="ata.html">Atas</a>
-                </li>
-                <li>
-                    <a href="sobrenos.html">Sobre nós</a>
-                </li>
-            </ol>
-        </nav>
 
-    </header>
-    <main class="recomendado">
-          <h1 class="h1s">Hábitos que você <br> deve Evitar</h1>
-        <section>
-      
-         <div class="recomendadoo"><p>
-             Existem vários comportamentos bem comuns que estão silenciosamente prejudicando nosso descanso e a gente nem sempre percebe. Um dos principais é beber muita água de noite:  parece bom, mas leva a idas ao banheiro que quebram o sono. Beber café de tarde também é uma cilada, já que a cafeína permanece por até 10 horas no corpo.</p>
+<header>
+    <h1 class="ain"><a href="index.html">MS</a></h1>
+    <nav>
+        <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="doenças.html">Insônia</a></li>
+            <li><a href="habitos.html">Hábitos saúdaveis</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="ata.html">Atas</a></li>
+            <li><a href="sobrenos.html">Sobre nós</a></li>
+        </ol>
+    </nav>
+</header>
 
+<main class="recomendado">
+
+    <h1 class="h1s">Hábitos que você <br> deve Evitar</h1>
+
+    <section>
+        <div class="recomendadoo">
+            <p>Existem vários comportamentos bem comuns que estão silenciosamente prejudicando nosso descanso e a gente nem sempre percebe...</p>
         </div>
-                 <div class="recomendadoo">
-                    <p>
-             Ter uma rotina desregrada,por exemplo dormir e acordar em horarios irregulares. Confunde o relógio biológico e atrapalha o descanso. Fazer um jantar pesado também pode acabar afetando seu sono: frituras, massas ou muito doce deixam a digestão lenta e atrapalham a produção de melatonina.</p>
 
+        <div class="recomendadoo">
+            <p>Ter uma rotina desregrada, como dormir e acordar em horários irregulares, confunde o relógio biológico...</p>
         </div>
-              </section>
-              <section>
-         
-                 <div class="recomendadoo"><p>
-             Bebidas alcoólicas ou fumar antes de dormir enganam: podem dar sono no começo, mas prejudicam as fases mais profundas dele. Dormir em quartos fechados e sem ventilação agrava alergias e resseca as vias respiratórias.</p>
+    </section>
 
+    <section>
+        <div class="recomendadoo">
+            <p>Bebidas alcoólicas ou fumar antes de dormir enganam: podem dar sono no começo, mas prejudicam as fases profundas...</p>
         </div>
-  
-        
 
-          
-                 <div class="recomendadoo"><p>
-             Se o ventilador ou ar-condicionado estiver sujo, a poeira e o mofo também atrapalham o conforto.</p>
-
+        <div class="recomendadoo">
+            <p>Se o ventilador ou ar-condicionado estiver sujo, a poeira e o mofo também atrapalham o conforto.</p>
         </div>
-        </section>
-        <section>
-         
-                 <div class="recomendadoo"><p>
-               Exercitar muito tarde pode “acordar” o corpo demais: a temperatura sobe, a adrenalina corre e isso dificulta relaxar para dormir.</p>
-        </div> 
-    
-                 <div class="recomendadoo"><p>
-         E por fim: usar a cama para tudo ver TV, rolar o celular ou ler enfraquece a associação desse espaço com o sono e a luz das telas suprime a melatonina.</p>
+    </section>
 
+    <section>
+        <div class="recomendadoo">
+            <p>Exercitar muito tarde pode “acordar” o corpo demais: a temperatura sobe, a adrenalina corre...</p>
         </div>
-       
-          
 
-</section>
-<div class="text-box">
-    <a href="habitos.html" class="btn btn-white btn-        animate">>>Anterior</a>
+        <div class="recomendadoo">
+            <p>Usar a cama para ver TV, rolar o celular ou ler enfraquece a associação dela com o sono...</p>
+        </div>
+    </section>
 
-</div>
-    </main>
-    <footer class="footer">
+    <div class="text-box">
+        <a href="habitos.html" class="btn">Anterior</a>
+    </div>
+
+</main>
+
+<footer class="footer">
     <div class="footer-content">
         <div class="footer-left">
             <h2>Modo Soneca</h2>
             <p>Projeto dedicado a promover a saúde do sono e qualidade de vida.</p>
         </div>
+
         <div class="footer-right">
             <h3>Redes Sociais</h3>
             <div class="social-icons">
@@ -106,8 +271,6 @@
         © 2025 Modo Soneca — Todos os direitos reservados.
     </div>
 </footer>
-   
 
 </body>
-
 </html>
