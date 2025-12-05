@@ -412,3 +412,196 @@ align-items: center;
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+<style>
+/* ------------------ BASE ------------------ */
+
+:root {
+    --main-bg-color: brown;
+    font-size: clamp(0.9375rem, 0.9119rem + 0.1136vw, 1rem);
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ------------------ HEADER ------------------ */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: #3b657a;
+    padding: 15px 20px;
+}
+
+header nav ol {
+    display: flex;
+    gap: 20px;
+}
+
+.ain {
+    font-size: 2rem;
+}
+
+/* ------------------ MAIN ------------------ */
+
+.recomendado {
+    background-image: url(imgs/6.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    color: #003f69;
+    padding-bottom: 60px;
+}
+
+.h1s {
+    font-size: clamp(2.3rem, 4vw, 5rem);
+    font-weight: 700;
+    text-align: center;
+    margin: 40px 10px;
+}
+
+/* ------------------ CARDS ------------------ */
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
+}
+
+.recomendadoo {
+    background-color: #003f69;
+    color: aliceblue;
+    padding: 25px;
+    font-size: 18px;
+    border-radius: 25px;
+    width: 45%;
+    min-width: 280px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+/* ------------------ BOTÃO ------------------ */
+
+.text-box {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.btn {
+    text-transform: uppercase;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    background-color: #3b657a;
+    color: aliceblue;
+    position: static !important;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ------------------ FOOTER ------------------ */
+
+.footer {
+    background-color: #003f69;
+    color: #fff;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.footer-left h2 {
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+
+.footer-right h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ------------------ RESPONSIVIDADE ------------------ */
+
+@media (max-width: 900px) {
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header nav ol {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .recomendadoo {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    .h1s {
+        font-size: 2.6rem;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .recomendadoo {
+        width: 100%;
+        font-size: 0.95rem;
+    }
+
+    .h1s {
+        font-size: 2rem;
+    }
+
+    header nav ol a {
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        padding: 30px 15px;
+    }
+}
+</style>

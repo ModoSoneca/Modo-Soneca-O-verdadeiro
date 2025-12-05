@@ -27,38 +27,97 @@
         color: aliceblue;
         font-weight: 550;
     }
+    /* Ajusta o tamanho do vídeo para não estourar a tela */
+.diva iframe {
+    width: 100%;
+    height: 350px;
+    max-width: 900px;
+}
+
+/* Organiza a caixa no PC (mantém seu estilo) */
+.diva {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 500px 1000px 1000px 500px;
+}
+
+/* Texto */
+.diva p {
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+/* ------------------------------
+      RESPONSIVIDADE
+------------------------------- */
+@media (max-width: 900px) {
+
+    /* A caixa vira coluna no celular */
+    .diva {
+        flex-direction: column;
+        text-align: center;
+        border-radius: 40px;
+        margin: 15px;
+        padding: 15px;
+    }
+
+    /* Vídeo se adapta */
+    .diva iframe {
+        height: 260px;
+        border-radius: 20px;
+    }
+
+    /* Texto mais confortável */
+    .diva p {
+        font-size: 20px;
+        text-align: justify;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .diva iframe {
+        height: 220px;
+    }
+
+    .diva p {
+        font-size: 18px;
+    }
+}
+
 </style>
 </head>
 
-
+<script>
+function toggleMenu() {
+    document.querySelector(".menu-overlay").classList.toggle("active");
+}
+</script>
 <body>
       <header>
-        <h1 class="ain"><a href="index.html">MS</a></h1>
-        <nav>
-            <ol>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>    
- 
-                <li>
-                    <a href="doenças.html">Insônia</a>
-                </li>
-                <li>
-                    <a href="habitos.html">Hábitos saúdaveis</a>
-                </li>
-                <li>
-                    <a href="videos.html">Videos</a>
-                </li>
-                <li>
-                    <a href="ata.html">Atas</a>
-                </li>
-                <li>
-                    <a href="sobrenos.html">Sobre nós</a>
-                </li>
-            </ol>
-        </nav>
+    <h1 class="ain"><a href="index.html">MS</a></h1>
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
-    </header>
+   
+    <nav class="menu-overlay">
+        <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="doenças.html">Insônia</a></li>
+            <li><a href="habitos.html">Hábitos saúdaveis</a></li>
+            <li><a href="videos.html">Vídeos</a></li>
+            <li><a href="ata.html">Atas</a></li>
+            <li><a href="sobrenos.html">Sobre nós</a></li>
+        </ol>
+    </nav>
+</header>
 <main>
     <section class="videos">
                 <div class="diva">

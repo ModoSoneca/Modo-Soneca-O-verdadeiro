@@ -142,22 +142,31 @@
     </style>
     </head>
 <body>
-
+<script>
+function toggleMenu() {
+    document.querySelector(".menu-overlay").classList.toggle("active");
+}
+</script>
     <header>
-        <h1 class="ain"><a href="index.html">MS</a></h1>
+    <h1 class="ain"><a href="index.html">MS</a></h1>
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
-        <nav>
-            <ol>
-                <li><a href="index.html">Home</a></li>    
-                <li><a href="doenças.html">Insônia</a></li>
-                <li><a href="habitos.html">Hábitos saúdaveis</a></li>
-                <li><a href="videos.html">Videos</a></li>
-                <li><a href="ata.html">Atas</a></li>
-                <li><a href="sobrenos.html">Sobre nós</a></li>
-            </ol>
-        </nav>
-    </header>
-
+   
+    <nav class="menu-overlay">
+        <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="doenças.html">Insônia</a></li>
+            <li><a href="habitos.html">Hábitos saúdaveis</a></li>
+            <li><a href="videos.html">Vídeos</a></li>
+            <li><a href="ata.html">Atas</a></li>
+            <li><a href="sobrenos.html">Sobre nós</a></li>
+        </ol>
+    </nav>
+</header>
     
         <main>
 

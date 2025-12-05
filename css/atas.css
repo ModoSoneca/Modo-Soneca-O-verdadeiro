@@ -214,3 +214,77 @@ body{
     }
 }
 
+nav.menu-overlay {
+    display: flex;
+    gap: 20px;
+}
+.hamburger {
+    display: none;
+}
+
+
+/* ----- MOBILE ----- */
+@media (max-width: 768px) {
+
+    /* Botão hamburguer */
+    .hamburger {
+        display: block;
+        width: 35px;
+        cursor: pointer;
+        margin-right: 20px;
+        float: right;
+        z-index: 1001;
+        position: relative;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 100%;
+        height: 4px;
+        background: #003f69;
+        margin: 6px 0;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+
+    /* MENU FULLSCREEN */
+    nav.menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;        /* ocupa a tela toda */
+        width: 100%;
+        background-color: #003f69;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-100%); /* escondido */
+        transition: 0.4s ease;
+        z-index: 1000;
+    }
+
+    /* lista */
+    nav.menu-overlay ol {
+        list-style: none;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    nav.menu-overlay ol li a {
+        text-decoration: none;
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    /* Mostrar menu */
+    nav.menu-overlay.active {
+        transform: translateY(0);
+    }
+}
+
+
