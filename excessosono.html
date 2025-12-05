@@ -2,64 +2,69 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Excesso de Sono</title>
+
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <style>
-       p{
-        font-size: 40px;
-        font-weight: 600;
-        text-align: center;
-        padding: 200px 400px 0px 400px;
-        color: #003f69;
-    }
-     main {
-    background-image: url(css/imgs/6.jpg);
-    background-size: cover;        
-    background-position: center;   
-    background-repeat: no-repeat;  
-    min-height: 100vh;             
-    padding: 50px 0;               
+<style>
+
+/* ----------- TÍTULO ----------- */
+.h18 {
+    font-size: 70px;
+    text-align: center;
+    margin: 40px 20px 10px;
+    color: #003f69;
 }
+
+/* ----------- RESULTADO ----------- */
+p#resultado {
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px 20px;
+    color: #003f69;
+}
+
+/* texto vermelho */
 .destaquee {
     font-weight: bold;
     color: red;
 }
-.h18{
-    font-size: 70px;
-    text-align: center;
-    margin: 30px;
-    color: #003f69;
-}
-    .text-box {
-margin: 50px 1000px 30px 800px;
+
+/* ----------- FUNDO ----------- */
+main {
+    background-image: url(css/imgs/6.jpg);
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;  
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.btn:link,
-.btn:visited {
+/* ----------- BOTÃO ----------- */
+.text-box {
+    margin-top: 40px;
+}
+
+.btn {
     text-transform: uppercase;
     text-decoration: none;
     padding: 15px 40px;
     display: inline-block;
     border-radius: 100px;
+    background-color: #3b657a;
+    color: white;
     transition: all .2s;
-    position: absolute;
+    position: relative;
 }
 
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.btn-white {
-    background-color: #3b657a;
-    color: aliceblue;
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
 }
 
 .btn::after {
@@ -68,15 +73,13 @@ margin: 50px 1000px 30px 800px;
     height: 100%;
     width: 100%;
     border-radius: 100px;
+    background-color: #003f69;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
+    opacity: 1;
     transition: all .4s;
-}
-
-.btn-white::after {
-    background-color:#003f69;
 }
 
 .btn:hover::after {
@@ -84,39 +87,107 @@ margin: 50px 1000px 30px 800px;
     opacity: 0;
 }
 
-.btn-animated {
-    animation: moveInBottom 5s ease-out;
-    animation-fill-mode: backwards;
-}
+/* ----------- MENU HAMBÚRGUER ----------- */
 
-@keyframes moveInBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
+.menu-overlay { display: none; }
+.hamburger { display: none; }
+
+/* mobile */
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: block;
+        width: 35px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 1001;
     }
 
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
+    .hamburger span {
+        display: block;
+        width: 100%;
+        height: 4px;
+        background: #003f69;
+        margin: 6px 0;
+        border-radius: 10px;
+        transition: 0.3s;
     }
+
+    nav.menu-overlay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: #003f69;
+        transform: translateY(-100%);
+        transition: 0.4s ease;
+        z-index: 1000;
+    }
+
+    nav.menu-overlay.active {
+        transform: translateY(0);
+    }
+
+    nav.menu-overlay ol {
+        list-style: none;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    nav.menu-overlay ol li a {
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    /* responsividade texto */
+    p#resultado {
+        font-size: 1.8rem;
+        padding: 20px;
+    }
+
+    .h18 {
+        font-size: 2.5rem;
+        padding: 10px;
+    }
+
+    .btn {
+        padding: 14px 28px;
+    }
+
 }
+
 </style>
 </head>
+
+<body>
+
 <script>
 function toggleMenu() {
     document.querySelector(".menu-overlay").classList.toggle("active");
 }
 </script>
-<body>
-      <header>
+
+<header>
     <h1 class="ain"><a href="index.html">MS</a></h1>
+
     <div class="hamburger" onclick="toggleMenu()">
         <span></span>
         <span></span>
         <span></span>
     </div>
 
-   
     <nav class="menu-overlay">
         <ol>
             <li><a href="index.html">Home</a></li>
@@ -128,34 +199,26 @@ function toggleMenu() {
         </ol>
     </nav>
 </header>
+
 <main>
+
     <h1 class="h18">Alerta de Excesso de Sono</h1>
+
     <p id="resultado"></p>
 
-    <script>
-        const params = new URLSearchParams(window.location.search);
-        const horas = Number(params.get("horas"));
+    <div class="text-box">
+        <a href="habitos.html" class="btn">Melhorar meu sono</a>
+    </div>
 
-        let msg = "";
-
-        if (horas > 10) {
-            msg = `Você dormiu <span class="destaquee">${horas} horas</span>. Isso é um valor muito alto e pode indicar cansaço extremo ou outros fatores!`;
-        } else {
-            msg = `Horas inválidas ou insuficientes para classificar como excesso.`;
-        }
-
-        document.getElementById("resultado").innerHTML = msg;
-    </script>
-      <div class="text-box">
-    <a href="habitos.html" class="btn btn-white btn-        animate">Melhorar meu sono</a>
-</div>
 </main>
+
 <footer class="footer">
     <div class="footer-content">
         <div class="footer-left">
             <h2>Modo Soneca</h2>
             <p>Projeto dedicado a promover a saúde do sono e qualidade de vida.</p>
         </div>
+
         <div class="footer-right">
             <h3>Redes Sociais</h3>
             <div class="social-icons">
@@ -169,5 +232,21 @@ function toggleMenu() {
         © 2025 Modo Soneca — Todos os direitos reservados.
     </div>
 </footer>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const horas = Number(params.get("horas"));
+
+let msg = "";
+
+if (horas > 10) {
+    msg = `Você dormiu <span class="destaquee">${horas} horas</span>. Isso é um valor muito alto e pode indicar cansaço extremo ou outros fatores!`;
+} else {
+    msg = `Horas inválidas ou insuficientes para classificar como excesso.`;
+}
+
+document.getElementById("resultado").innerHTML = msg;
+</script>
+
 </body>
 </html>

@@ -8,139 +8,190 @@
         <link rel="stylesheet" href="css/style.css">
 
     <style>
-    .resultado{
-        font-size: 40px;
-        font-weight: 600;
-        text-align: center;
-        padding: 300px;
-        color: #003f69;
-    }
+/* ----------- RESULTADO ----------- */
+.resultado{
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    padding: 100px 20px;  /* antes era 300px — ARRUMADO */
+    color: #003f69;
+}
 
-    main {
-        background-image: url(css/imgs/6.jpg);
-        background-size: cover;        
-        background-position: center;   
-        background-repeat: no-repeat;  
-        min-height: 100vh;             
-        padding: 50px 0;
-    }
-    .destaque { font-weight: bold; color: green; }
-    .destaquee { font-weight: bold; color: red; }
+/* fundo */
+main {
+    background-image: url(css/imgs/6.jpg);
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;  
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centraliza sem empurrar o footer */
+    align-items: center;
+}
 
-    .btn {
-        text-transform: uppercase;
-        text-decoration: none;
-        padding: 15px 40px;
-        display: inline-block;
-        border-radius: 100px;
-        transition: all .2s;
-    }
+/* textos coloridos */
+.destaque { font-weight: bold; color: green; }
+.destaquee { font-weight: bold; color: red; }
 
-    .btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(0,0,0,.2);
-    }
+/* ----------- BOTÕES ----------- */
+.btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+}
 
-    .btn:active {
-        transform: translateY(-1px);
-        box-shadow: 0 5px 10px rgba(0,0,0,.2);
-    }
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
 
-    .btn-white {
-        background-color: #3b657a;
-        color: white;
-        border: none;
-    }
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
 
-    .btn::after {
-        content: "";
-        display: inline-block;
-        height: 100%;
-        width: 100%;
-        border-radius: 100px;
+.btn-white {
+    background-color: #3b657a;
+    color: white;
+    border: none;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #003f69;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 1s ease-out backwards;
+}
+
+@keyframes moveInBottom {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0px); }
+}
+
+#botaoBom,
+#botaoRuim {
+    display: none;
+    margin-top: 20px;
+}
+
+/* ----------- MENU HAMBÚRGUER ----------- */
+
+/* desktop */
+.menu-overlay { display: none; }
+.hamburger { display: none; }
+
+@media (max-width: 768px) {
+
+    /* botão */
+    .hamburger {
+        display: block;
+        width: 35px;
         position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 100%;
+        height: 4px;
+        background: #003f69;
+        margin: 6px 0;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+
+    /* menu fullscreen */
+    nav.menu-overlay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
         top: 0;
         left: 0;
-        z-index: -1;
-        transition: all .4s;
-    }
-
-    .btn-white::after {
+        height: 100vh;
+        width: 100%;
         background-color: #003f69;
+        transform: translateY(-100%);
+        transition: 0.4s ease;
+        z-index: 1000;
     }
 
-    .btn:hover::after {
-        transform: scaleX(1.4) scaleY(1.6);
-        opacity: 0;
+    nav.menu-overlay.active {
+        transform: translateY(0);
     }
 
-    .btn-animated {
-        animation: moveInBottom 1s ease-out;
-        animation-fill-mode: backwards;
+    nav.menu-overlay ol {
+        list-style: none;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
     }
-    @keyframes moveInBottom {
-        0% { opacity: 0; transform: translateY(30px); }
-        100% { opacity: 1; transform: translateY(0px); }
+
+    nav.menu-overlay ol li a {
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+        text-decoration: none;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .resultado {
+        font-size: 1.7rem;
+        padding: 40px 15px;
+    }
+
+    .btn {
+        padding: 12px 25px;
     }
 
     #botaoBom,
     #botaoRuim {
-        display: none;
-        margin: 20px auto;
-        width: fit-content;
+        width: 80%;
     }
+}
 
-
-    #botaoBom a,
-    #botaoRuim a {
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
-
-
-    @media (max-width: 1000px) {
-
-        .resultado {
-            font-size: 2rem !important;
-            padding: 60px 20px !important;
-        }
-
-        #botaoBom,
-        #botaoRuim {
-            width: fit-content;
-            margin: 20px auto;
-        }
-
-        .btn {
-            padding: 14px 28px;
-        }
-
-        main {
-            padding: 30px 0;
-            min-height: 80vh;
-        }
-    }
-
-    @media (max-width: 600px) {
-
-        .resultado {
-            font-size: 1.6rem !important;
-            padding: 30px 15px !important;
-        }
-
-        #botaoBom,
-        #botaoRuim {
-            width: 80%;
-        }
-
-        .btn {
-            padding: 12px 20px;
-        }
-    }
 
     </style>
     </head>
+    <script>
+function toggleMenu() {
+    document.querySelector(".menu-overlay").classList.toggle("active");
+}
+</script>
+
 <body>
 <script>
 function toggleMenu() {
